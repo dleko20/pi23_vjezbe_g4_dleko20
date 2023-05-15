@@ -31,6 +31,7 @@
             this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.btnEvaluation = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,16 +44,27 @@
             this.dgvStudents.Name = "dgvStudents";
             this.dgvStudents.RowHeadersWidth = 51;
             this.dgvStudents.RowTemplate.Height = 24;
-            this.dgvStudents.Size = new System.Drawing.Size(1110, 540);
+            this.dgvStudents.Size = new System.Drawing.Size(1198, 540);
             this.dgvStudents.TabIndex = 0;
+            // 
+            // btnEvaluation
+            // 
+            this.btnEvaluation.Location = new System.Drawing.Point(1171, 560);
+            this.btnEvaluation.Name = "btnEvaluation";
+            this.btnEvaluation.Size = new System.Drawing.Size(131, 35);
+            this.btnEvaluation.TabIndex = 1;
+            this.btnEvaluation.Text = "Evaluiraj studenta";
+            this.btnEvaluation.UseVisualStyleBackColor = true;
+            this.btnEvaluation.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1226, 582);
+            this.ClientSize = new System.Drawing.Size(1314, 607);
+            this.Controls.Add(this.btnEvaluation);
             this.Controls.Add(this.dgvStudents);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmStudents";
             this.Text = "FrmStudents";
             this.Load += new System.EventHandler(this.FrmStudents_Load);
@@ -66,5 +78,6 @@
         private System.Windows.Forms.DataGridView dgvStudents;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private System.Windows.Forms.Button btnEvaluation;
     }
 }
