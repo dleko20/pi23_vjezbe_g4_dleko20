@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -66,5 +67,25 @@ namespace Evaluation_Manager.Repositories
             };
             return evaluation;
         }
+
+        public static void InsertEvaluation (Student student, Activity activity, Teacher teacher, int points)
+        {
+            string sql = $"INSERT INTO Evaluations (IdActivities; IdStudents, IdTeachers, EvaluationDate, Points) VALUES ({activity.Id}, {student.Id}, {teacher.Id}, GETDATE(), {points})";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+
+        }
+
+        public static void UpdateEvaluation (Evaluation evaluation, Teacher teacher, int points)
+        {
+            string sql = $"UPDATE evaluations SET IdTeachers = {teacher.Id}, Points = {points}, EvaluatioDate = GETDATE() WHERE IdActivities = {evaluation.Activity.Id} AND IdStudents = {evaluation.Student.Id}";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+
+
+
     }
 }
