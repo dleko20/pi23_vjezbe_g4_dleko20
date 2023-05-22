@@ -16,7 +16,7 @@ namespace Evaluation_Manager
     {
         private Student student;
 
-        public Student SelectedStudent { get => student;  set => student => value; }
+        public Student SelectedStudent { get => student; set => student = value; }
 
         public FrmEvaluation(Student selectedStudent)
         {
