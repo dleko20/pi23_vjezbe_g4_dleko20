@@ -32,6 +32,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.btnEvaluation = new System.Windows.Forms.Button();
+            this.btnGenerate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,11 +58,22 @@
             this.btnEvaluation.UseVisualStyleBackColor = true;
             this.btnEvaluation.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnGenerate
+            // 
+            this.btnGenerate.Location = new System.Drawing.Point(67, 571);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(137, 23);
+            this.btnGenerate.TabIndex = 2;
+            this.btnGenerate.Text = "Generiraj izvještaj";
+            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
+            // 
             // FrmStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1314, 607);
+            this.Controls.Add(this.btnGenerate);
             this.Controls.Add(this.btnEvaluation);
             this.Controls.Add(this.dgvStudents);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -79,5 +91,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.Button btnEvaluation;
+        private System.Windows.Forms.Button btnGenerate;
     }
 }
